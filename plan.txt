@@ -1,0 +1,28 @@
+Il s'agit ici de mettre sur pieds une petite application pour pouvoir 
+ajouter et retirer des demandes d'amitiés.
+
+
+
+--- Authentification ---
+
+    Pour mon Authentification j'ai utilisé Laravel ui. Après avoir installé Laravel ui en faisant composer require laravel/ui,
+faites un npm run dev avant de lancer votre serveur sinon vous aurez un problème sur le script vite de votre vue (app.blade.php).
+
+
+--- Pour gerer les demandes d'amitiés j'utilise Laravel Friendschips ---
+
+    C'est ce package qui vous permet d'envoyer des demandes d'amis, accepter les demandes d'amis, refuser les demandes d'amis,
+bloquer un autre modèle ou groupe d'amis.
+    . Pour l'instaler il suffit d'éxecuter la commande composer require hootlex/laravel-friendships
+    . Ensuite publier les configurations en éxecutant : php artisan vendor:publish --provider="Hootlex\Friendships\FriendshipsServiceProvider"
+    . Pour toute configfuration aller dans : config\friendships.php
+    . Et enfin éxecuter les migrations car lorsque vous installer le package deux migrations sont crées : php artisan migrate
+
+Pour tout autre façon d'utiliser le package bien vouloir consulter le lien : https://github.com/hootlex/laravel-friendships
+
+
+--- Notifications ---
+
+    Ici nous créeons une migration notification avec la commande : php artisan notifications:table et le reste on procède comme 
+l'explique la documentation Laravel pour gérer les notifications.
+
